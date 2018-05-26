@@ -1,0 +1,268 @@
+@import "normalize";
+@import "layout";
+@import "fonts";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-Book.woff2') format('woff2'),
+        url('../fonts/Gotham-Book.woff') format('woff'),
+        url('../fonts/Gotham-Book.svg#Gotham-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-Bold.woff2') format('woff2'),
+        url('../fonts/Gotham-Bold.woff') format('woff'),
+        url('../fonts/Gotham-Bold.svg#Gotham-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-Medium.woff2') format('woff2'),
+        url('../fonts/Gotham-Medium.woff') format('woff'),
+        url('../fonts/Gotham-Medium.svg#Gotham-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+$primary-color: #2c4058;;
+$text-color: rgba(74, 85, 98, 0.5);
+$title-color: #fff;
+$header-font-family: 'Gotham';
+
+body 
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	line-height: 1.6;
+	font-weight: 400;
+	color: $text-color;
+}
+
+/* Layout */
+.ba-container
+{
+	padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1230px;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover
+{
+	color: #000;
+	background-color: #125bb2;
+	opacity: 0.5;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+}
+
+.ba-header
+{
+	background: url("../img/bg-header.jpg");
+}
+
+.ba-header-menu
+{
+	-top: 55px;
+}
+
+.ba-header-title
+{
+	font-size: 80px;
+	font-weight: 700;
+	font-family: $header-font-family;
+	line-height: 0.2;
+	color: $title-color;
+	text-align: center;
+	margin-top: 265px;
+}
+
+.ba-header-subtitle
+{
+	font-size: 18px;
+	font-weight: 300;
+	font-family: $header-font-family;
+	line-height: 1.2;
+	color: $title-color;
+	text-align: center;
+}
+
+.ba-nav
+{
+	flex-grow: 1;
+	padding-right: 100px;
+}
+
+.ba-menu
+{
+	display: flex;
+	justify-content: flex-end;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.ba-menu a
+{
+	font-family: $header-font-family;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 1.5;
+	color: $title-color;
+	text-decoration: none;
+}
+
+.ba-menu a
+{
+	margin: 0 15px;
+	text-transform: uppercase;
+}
+
+.ba-menu a:hover
+{
+	color: #2c4058;
+}
+
+.ba-menu li:last-child a
+{
+	margin-right: 0;
+}
+
+.ba-menu li:first-child a
+{
+	margin-left: 0;
+}
+
+.ba-scroll 
+{
+	display: flex;
+	justify-content: center;
+	margin-top: 223px;
+	padding-bottom: 50px;
+}
+
+.section-title
+{
+	font-size: 44px;
+	font-family: $header-font-family;
+	font-weight: 700;
+	line-height: 0.5;
+	color: #2c4058;
+	text-align: center;
+	margin-top: 140px;
+}
+
+.ba-what-img, 
+{
+	width: 60%;
+	margin-top: 100px;
+	flex-direction: column;
+	display: flex;
+}
+
+.back, .back2
+{
+	position: absolute;
+	z-index: 0;	
+}
+
+.what
+{
+	position: relative;
+	z-index: 1;
+	left: 80px;
+	top: 100px;
+}
+
+.ba-row
+{
+	display: flex;
+}
+
+.ba-what-text
+{
+	width: 40%;
+	float: right;
+	flex-direction: column;
+	display: flex;
+}
+
+.ba-section-title
+{
+	font-family: $header-font-family;
+	color:  #2c4058;
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 1;
+}
+
+.ba-what-text span
+{
+	font-family: $header-font-family;
+	color:  #2c4058;
+	font-size: 44px;
+	font-weight: 300;
+	line-height: 0.5;
+}
+
+.ba-what-text p
+{
+	font-family: 'Open Sans', sans-serif;
+	color:  rgba(74, 85, 98, 0.5);
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.6;
+	margin-top: 40px;
+}
+
+.ba-button
+{
+	margin-top: 37px;
+}
+
+.ba-center
+{
+	margin-top: 135px;
+}
